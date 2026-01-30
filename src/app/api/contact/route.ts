@@ -3,6 +3,11 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Use Resend's default domain until vsumup.com is verified
+// After domain verification, change to: "vsumup Contact <noreply@vsumup.com>"
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "vsumup Contact <onboarding@resend.dev>";
+const TO_EMAIL = process.env.CONTACT_EMAIL || "support@vsumup.com";
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -26,8 +31,8 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "vsumup Contact <noreply@vsumup.com>",
-      to: ["support@vsumup.com"],
+      from: FROM_EMAIL,
+      to: [TO_EMAIL],
       replyTo: email,
       subject: `New Inquiry: ${area}`,
       text: `
