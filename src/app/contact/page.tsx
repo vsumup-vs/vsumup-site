@@ -39,7 +39,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm">Enterprise Inquiries</h4>
-                  <p className="text-slate-500 text-sm">solutions@vsumup.com</p>
+                  <p className="text-slate-500 text-sm">support@vsumup.com</p>
                 </div>
               </div>
               <div className="flex gap-4">
