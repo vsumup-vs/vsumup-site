@@ -99,15 +99,21 @@ export function ContactForm() {
     setErrors({});
 
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          area: formData.area,
+          message: formData.message,
+        }),
+      });
 
-      // In production, you would do:
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
 
       setSubmitted(true);
     } catch {
