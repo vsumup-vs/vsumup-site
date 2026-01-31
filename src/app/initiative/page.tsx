@@ -58,16 +58,26 @@ export default function InitiativePage() {
                 </div>
               </div>
             </div>
-            <a
-              href="https://vsumup.online/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white
-                         rounded-xl font-black hover:bg-blue-700 transition-all
-                         shadow-xl shadow-blue-500/20"
-            >
-              Launch vsumup.online <ExternalLink size={18} />
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://vsumup.online/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white
+                           rounded-xl font-black hover:bg-blue-700 transition-all
+                           shadow-xl shadow-blue-500/20"
+              >
+                Launch vsumup.online <ExternalLink size={18} />
+              </a>
+              <a
+                href="/case-studies/initiative"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white
+                           rounded-xl font-black hover:bg-slate-700 transition-all
+                           border border-slate-700"
+              >
+                View Case Study
+              </a>
+            </div>
           </div>
         </div>
       </div>

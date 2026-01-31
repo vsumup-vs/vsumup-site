@@ -43,7 +43,7 @@ export default function MeAiPage() {
           parsing and agentic RAG workflows, powered by the vsumup technical core.
         </p>
 
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center gap-4 flex-wrap mb-8">
           <a
             href="https://me-at-ai.com"
             target="_blank"
@@ -53,6 +53,14 @@ export default function MeAiPage() {
                        shadow-xl shadow-indigo-500/20"
           >
             Explore me-at-ai.com <ExternalLink size={18} />
+          </a>
+          <a
+            href="/case-studies/meai"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white
+                       rounded-xl font-black hover:bg-slate-700 transition-all
+                       border border-slate-700"
+          >
+            View Case Study
           </a>
         </div>
 

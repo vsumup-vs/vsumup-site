@@ -16,6 +16,11 @@ export const footerLinks = {
     { label: "vsumup Health", href: "/health" },
     { label: "Me@AI", href: "/meai" },
   ],
+  caseStudies: [
+    { label: "Initiative Manager", href: "/case-studies/initiative" },
+    { label: "VitalEdge Health", href: "/case-studies/health" },
+    { label: "Me@AI", href: "/case-studies/meai" },
+  ],
   technical: [
     { label: "Contact Sales", href: "/contact" },
     { label: "Security Whitepaper", href: "/security" },

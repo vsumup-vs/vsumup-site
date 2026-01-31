@@ -45,15 +45,24 @@ export default function HealthPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="https://vsumup-health.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white
-                         rounded-xl font-bold hover:bg-emerald-700 transition-all"
-            >
-              Visit vsumup-health.com <ExternalLink size={18} />
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://vsumup-health.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white
+                           rounded-xl font-bold hover:bg-emerald-700 transition-all"
+              >
+                Visit vsumup-health.com <ExternalLink size={18} />
+              </a>
+              <a
+                href="/case-studies/health"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white
+                           rounded-xl font-bold hover:bg-slate-700 transition-all"
+              >
+                View Case Study
+              </a>
+            </div>
           </div>
 
           {/* Feature Card */}

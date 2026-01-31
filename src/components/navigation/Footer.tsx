@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-900 text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-16 mb-24">
+        <div className="grid md:grid-cols-5 gap-12 mb-24">
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-8">
@@ -27,6 +27,22 @@ export function Footer() {
             </h4>
             <ul className="space-y-4 text-slate-400 font-bold text-sm text-left">
               {footerLinks.ecosystem.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-blue-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Case Studies */}
+          <div>
+            <h4 className="font-black text-white uppercase tracking-widest text-xs mb-8">
+              Case Studies
+            </h4>
+            <ul className="space-y-4 text-slate-400 font-bold text-sm text-left">
+              {footerLinks.caseStudies.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-blue-400 transition-colors">
                     {link.label}
